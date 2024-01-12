@@ -1,0 +1,71 @@
+program MMOM_MUDSOX;
+
+uses
+  Forms,
+  formMainMenu in 'formMainMenu.pas' {frmMainMenu},
+  formScheduler in 'formScheduler.pas' {frmScheduler},
+  formPatient in 'formPatient.pas' {frmPatient},
+  formPickList in 'formPickList.pas' {frmPickLists},
+  formNewPickList in 'formNewPickList.pas' {frmNewPickList},
+  formAppointment in 'formAppointment.pas' {frmAppointment},
+  formhousehold in 'formhousehold.pas' {frmHousehold},
+  formSurvey in 'formSurvey.pas' {frmSurvey},
+  formEquipment in 'formEquipment.pas' {frmEquipment},
+  formFacility in 'formFacility.pas' {frmFacility},
+  formStaff in 'formStaff.pas' {frmStaff},
+  FormSurveyQR in 'FormSurveyQR.pas' {frmSurveyQR},
+  formNewSurvey in 'formNewSurvey.pas' {frmNewSurvey},
+  formReminder in 'formReminder.pas' {frmReminder},
+  formSurveyCreate in 'formSurveyCreate.pas' {frmSurveyCreate},
+  dataMainDatamodule in 'dataMainDatamodule.pas' {dtmMain: TDataModule},
+  procSharedDatamoduleCalls in 'procSharedDatamoduleCalls.pas',
+  formNewSurveyRule in 'formNewSurveyRule.pas' {frmNewSurveyRule},
+  FormSurveyCreatorQR in 'FormSurveyCreatorQR.pas' {frmSurveyCreatorQR},
+  FormImmunizationQR in 'FormImmunizationQR.pas' {frmImmunizationQR},
+  formQuery in 'formQuery.pas' {frmQuery},
+  formSpecialUtilities in 'formSpecialUtilities.pas' {frmSpecialUtilities},
+  procImageSupport in 'procImageSupport.pas',
+  formPickListQR in 'formPickListQR.pas' {frmPickListQR},
+  formQueryQR in 'formQueryQR.pas' {frmQueryQR},
+  formImportImage in 'formImportImage.pas' {frmImportImage},
+  formFullImage in 'formFullImage.pas' {frmFullImage},
+  formDataGraph in 'formDataGraph.pas' {frmDatabaseGraph},
+  FmxUtils in 'Fmxutils.pas',
+  formApptQR in 'formApptQR.pas' {frmAppointmentQR},
+  formPatientQR in 'formPatientQR.pas' {frmPatientQR},
+  formHouseholdQR in 'formHouseholdQR.pas' {frmHouseholdQR},
+  form1500QR in 'form1500QR.pas' {frm1500QR},
+  FormReminderQR in 'FormReminderQR.pas' {frmReminderQR},
+  form1500 in 'form1500.pas' {frm1500},
+  formInsurance in 'formInsurance.pas' {frmInsurance},
+  formInvoiceQR in 'formInvoiceQR.pas' {frmInvoiceQR},
+  formApptSummQR in 'formApptSummQR.pas' {rptApptSumm: TQuickRep},
+  formSchedule1 in 'formSchedule1.pas' {rptSchedule1: TQuickRep},
+  formSchedule2 in 'formSchedule2.pas' {rptSchedule2: TQuickRep},
+  formCompanyBilling in 'formCompanyBilling.pas' {frmCompanyBilling},
+  formInvoice in 'formInvoice.pas' {rptInvoice: TQuickRep},
+  formInvoiceSummary306090 in 'formInvoiceSummary306090.pas' {rptInvoiceSummary306090: TQuickRep},
+  dataScheduler in 'dataScheduler.pas' {dtmScheduler: TDataModule},
+  formFinanceSummary in 'formFinanceSummary.pas' {frmFinanceSummary},
+  formPatientHistory in 'formPatientHistory.pas' {frmPatientHistory},
+  formSchedPassword in 'formSchedPassword.pas' {frmSchedPassword},
+  formClinicReports in 'formClinicReports.pas' {frmClinicReports},
+  formUnitedWayQR3 in 'formUnitedWayQR3.pas' {rptUnitedWay3: TQuickRep},
+  formUnitedWayQR1a in 'formUnitedWayQR1a.pas' {rptUnitedWay1a: TQuickRep},
+  formUnitedWayQR2 in 'formUnitedWayQR2.pas' {rptUnitedWay2: TQuickRep},
+  formUnitedWayQR2b in 'formUnitedWayQR2b.pas' {rptUnitedWay2b: TQuickRep},
+  formCindySummary in 'formCindySummary.pas' {frmCindySummary},
+  formInvoiceSummary in 'formInvoiceSummary.pas' {rptInvoiceSummary: TQuickRep},
+  form30_60_90 in 'form30_60_90.pas' {frm30_60_90},
+  form30_60_90QR in 'form30_60_90QR.pas' {rpt30_60_90: TQuickRep},
+  formUnitedWayQR in 'formUnitedWayQR.pas' {rptUnitedWay: TQuickRep},
+  rptOpenBills in 'rptOpenBills.pas' {rptAllOpenBills: TQuickRep};
+
+{$R *.RES}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TfrmMainMenu, frmMainMenu);
+  Application.CreateForm(TrptUnitedWay, rptUnitedWay);
+  Application.Run;
+end.
